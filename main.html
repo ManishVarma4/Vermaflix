@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vermaflix.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            background: url("./img/luffy.jpg") no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 2500px;
+            filter: brightness(60%);
+        }
+
+        #search {
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-family: cursive;
+            margin-right: 20px;
+        }
+
+        .list {
+            display: flex;
+        }
+
+        .item {
+            list-style: none;
+            padding: 0 10px;
+        }
+
+        #logo {
+            width: 70px;
+            height: auto;
+            margin: 10px;
+        }
+
+        .link {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            font-family: cursive;
+            transition: all 0.5s ease-out;
+        }
+
+        .link:hover {
+            color: rgb(218, 90, 90);
+            text-decoration: overline;
+        }
+
+        #active {
+            text-decoration: overline;
+            color: rgb(235, 114, 16);
+        }
+
+        header {
+            display: flex;
+            position: sticky;
+            top: 3px;
+            background-color: rgba(52, 60, 75, 0.575);
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            z-index: 100;
+        }
+
+        .division {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sub-anime {
+            display: block;
+            border: 3px solid black;
+            width: 375px;
+            height: 437px;
+            margin: 40px;
+            text-align: center;
+            font-size: 50px;
+            padding-top: 150px;
+            font-family: cursive;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            color: white;
+        }
+
+        .sub-anime:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px white;
+            font-size: 55px;
+        }
+
+        .sub-anime::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            filter: brightness(70%);
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .sub-anime:hover::before {
+            transform: scale(1.1);
+        }
+
+        #naruto::before {
+            background-image: url("./img/kakashi.jpg");
+        }
+
+        #one-piece::before {
+            background-image: url("./img/luffy2.jpg");
+        }
+
+        #bleach::before {
+            background-image: url("./img/bleach.jpg");
+        }
+
+        #death-note::before {
+            background-image: url("./img/deathnote.jpg");
+        }
+
+        #demon-slayer::before {
+            background-image: url("./img/demon.jpg");
+        }
+
+        #girlfriend::before {
+            background-image: url("./img/kazuya.jpg");
+        }
+
+        #dxd::before {
+            background-image: url("./img/rias.png");
+        }
+
+        #highschool::before {
+            background-image: url("./img/highschool.jpg");
+        }
+
+        #heram::before {
+            background-image: url("./img/heram.jpg");
+        }
+
+        hr {
+            border: 1px solid white;
+            margin: 20px 0;
+        }
+
+        .text {
+            margin-left: 50px;
+            font-size: 50px;
+            font-family: cursive;
+            color: whitesmoke;
+            margin-top: 40px;
+        }
+
+        footer {
+            text-align: center;
+            color: black;
+            font-size: 15px;
+            background-color: grey;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        a.sub-anime {
+            text-decoration: none;
+            color: white;
+        }
+        
+        @media (max-width: 1200px) {
+            .division {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="./img/logo.png" alt="vermaflix.com" id="logo">
+        <nav class="navbar">
+            <ul class="list">
+                <li class="item"><a href="#" class="link" id="active">Home</a></li>
+                <li class="item"><a href="#" class="link">Collections</a></li>
+                <li class="item"><a href="#" class="link">About Us</a></li>
+                <li class="item"><a href="#" class="link">Contact Us</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search anime:" id="search">
+    </header>
+
+    <section class="main">
+        <div class="text">Big-3</div>
+        <div class="division" id="big3">
+            <a href="https://www.crunchyroll.com/series/GY9PJ5KWR/naruto" target="_blank" class="sub-anime" id="naruto">Naruto</a>
+            <a href="https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece" target="_blank" class="sub-anime" id="one-piece">One Piece</a>
+            <a href="https://www.crunchyroll.com/series/G63VGG2NY/bleach" target="_blank" class="sub-anime" id="bleach">Bleach</a>
+        </div>
+
+        <hr>
+
+        <div class="text">Trending</div>
+        <div class="division" id="trending">
+            <a href="https://www.crunchyroll.com/series/G6QWD3EE6/death-note?srsltid=AfmBOopHphto4gH7Sd8wruXksEFhqf_3aB8cxdoujPHMyBvA2u2weRlC" target="_blank" class="sub-anime" id="death-note">Death Note</a>
+            <a href="https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba" target="_blank" class="sub-anime" id="demon-slayer">Demon Slayer</a>
+            <a href="https://www.crunchyroll.com/series/G6QWV3976/rent-a-girlfriend?srsltid=AfmBOooMp3zAH6L2V08jRQ7suerqr7rzlIMhRymCQFAXBKakzq30kC73" target="_blank" class="sub-anime" id="girlfriend">Rent a Girlfriend</a>
+        </div>
+
+        <hr>
+
+        <div class="text">18+</div>
+        <div class="division" id="adult">
+            <a href="https://www.crunchyroll.com/series/GR2P21J9R/high-school-dxd?srsltid=AfmBOoqypknEZymqUvaBSNfJ9QoJbUnltCs8FJwhRqjPM4fW1IggtNV8" target="_blank" class="sub-anime" id="dxd">Highschool DxD</a>
+            <a href="https://www.crunchyroll.com/series/GP5HJ8QWV/high-school-of-the-dead?srsltid=AfmBOor4vORUamKXYnlbjAQ_wU2uEXU2eum8IeE2A0HC0AO6gDaLl5Qi" target="_blank" class="sub-anime" id="highschool">Highschool of the Dead</a>
+            <a href="https://www.crunchyroll.com/series/GG5H5X002/harem-in-the-labyrinth-of-another-world?srsltid=AfmBOoq2tMAycnbUd6aoFI2s2dvoJk40NHKCNBTlzZmUYW2lQ8dtM1XU" target="_blank" class="sub-anime" id="heram">Harem in the Labyrinth</a>
+        </div>
+    </section>
+
+    <footer>
+        All Rights Reserved &copy; Vermaflix.com
+    </footer>
+
+</body>
+
+</html>
