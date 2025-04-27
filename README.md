@@ -14,7 +14,3 @@ Welcome to **AnimeVerse**, a vibrant platform where anime fans can explore, disc
 ## Installation  
 Clone this repository and open it locally to get started:  
 
-```bash
-git clone https://github.com/your-username/anime-website.git  
-cd anime-website  
-open index.html  
